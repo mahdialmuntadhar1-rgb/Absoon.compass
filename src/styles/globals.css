@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-navy-primary: #080E1A;
+  --color-navy-secondary: #0F1829;
+  --color-navy-elevated: #162035;
+  --color-navy-border: #1E2D47;
+  
+  --color-gold: #C9A84C;
+  --color-gold-bright: #F0C060;
+  --color-emerald: #2DD4A0;
+  --color-rose: #E56B6F;
+  
+  --color-text-primary: #EEF2FF;
+  --color-text-muted: #7A92B4;
+  --color-text-faint: #3D5273;
+}
+
+:root {
+  --bg-primary: #080E1A;
+  --bg-secondary: #0F1829;
+  --bg-elevated: #162035;
+  --border: #1E2D47;
+  --gold: #C9A84C;
+  --gold-bright: #F0C060;
+  --emerald: #2DD4A0;
+  --rose: #E56B6F;
+  --text-primary: #EEF2FF;
+  --text-muted: #7A92B4;
+  --text-faint: #3D5273;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+/* Base Card Style */
+.compass-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.05);
+  border-radius: 1rem;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
